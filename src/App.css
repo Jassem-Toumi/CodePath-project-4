@@ -1,0 +1,249 @@
+:root {
+  --introColor: rgba(37, 1, 166, 0.5);
+  --btnColor: rgb(122, 36, 7);
+  --bgColor: rgb(238, 238, 238);
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  height: 100vh;
+}
+
+.main {
+  display: grid;
+  grid-template-areas:
+    " banner banner banner banner banner"
+    "history card card card ban"
+    " . . control . .";
+  height: fit-content;
+  grid-template-columns: 15% 15% 35% 15% 15%;
+  gap: 10px;
+  align-items: stretch;
+  width: 100%;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+  /* position: static; */
+}
+
+.controlBtns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  grid-area: control;
+}
+
+.next {
+  width: 50%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.back {
+  width: 50%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.banner {
+  grid-area: banner;
+  color: aliceblue;
+}
+
+.display-Card {
+  position: relative;
+  grid-area: card;
+  background-color: var(--bgColor);
+  border: 2px solid rgb(73, 33, 33);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  place-items: center;
+  gap: 30px;
+  /* width: 100%; */
+}
+
+.bookMark {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.descriptionWrapper {
+  /* position: absolute;
+  left: 0;
+  top: 40%; */
+  border-radius: 0 10px 10px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  gap: 20px;
+  height: fit-content;
+  justify-content: center;
+  align-items: start;
+}
+
+.descriptionWrapper button {
+  /* background-color: aquamarine; */
+  /* color: inherit; */
+  padding: 10px;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+}
+
+
+
+.bookMark button {
+  padding: 5px 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.description{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  text-align: start;
+}
+
+.description h4{
+  padding: 0;
+  margin: 0;
+}
+
+
+.categories {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  place-items: center;
+  width: 100%;
+}
+
+.Invisible{
+  display: none;
+}
+
+.book-property {
+  display: flex;
+  gap: 10px;
+  place-items: center;
+  width: 30%;
+}
+
+.book-property h4{
+  width: max-content;
+}
+
+.book-property button {
+  width: max-content;
+  padding: 5px;
+  /* height: 30px; */
+  cursor: pointer;
+
+}
+
+img {
+  width: 230px;
+  height: 330px;
+}
+
+.ban-box,
+.history-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  place-items: center;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.ban-box {
+  padding: 0 20px;
+  background-color: var(--bgColor);
+}
+
+.bannedBtns{
+display: flex;
+flex-direction: column;
+gap: 10px;
+width: 100%;
+}
+.bannedBtns button{
+  width: 100%;
+}
+
+.history-box {
+  grid-area: history;
+  padding: 5px 0;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.history-box .saved,
+.history-box .select-wrapper {
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 10px;
+  background-color: var(--bgColor);
+}
+
+.select-wrapper select {
+  width: 80%;
+}
+
+.history-box .saved {
+  padding: 10px 0;
+}
+
+.history-box h3 {
+  margin: 0;
+  padding: 5px;
+}
+
+.intro {
+  position: absolute;
+  z-index: 100;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  background-color: var(--introColor);
+  /* shining border */
+  border: 2px solid rgb(73, 33, 33);
+  transition: all 0.2s ease-in-out;
+  padding: 10px 25px;
+  border-radius: 10px;
+}
+
+.intro button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: var(--btnColor);
+  color: aliceblue;
+  font-size: 20px;
+}
