@@ -34,7 +34,9 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-Working On it...
+<a href="https://www.loom.com/share/fc80bb9df7a54c5096a54ab2044feb79">
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/fc80bb9df7a54c5096a54ab2044feb79-with-play.gif">
+</a>
 
 ## Notes
 
